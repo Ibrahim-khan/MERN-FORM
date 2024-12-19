@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+const cors = require('cors');
+app.use(cors());
+
 require('./db/connection');
 const Users = require('./Models/User');
 const User = require('./Models/User');
